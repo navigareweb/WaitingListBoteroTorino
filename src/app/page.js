@@ -1,95 +1,68 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Image from "next/image";
+import Link from "next/link";
+import styles from "./index.module.scss";
+import copertina from "../../public/600x300.png";
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
+      <div className={styles.copertina}>
         <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+          src={copertina}
+          width={"100%"}
+          className={"img"}
+          alt="copertina"
         />
+        <p>
+          La mostra{" "}
+          <strong>
+            “ricordando Fernando Botero, Via Crucis - La passione di Cristo”
+          </strong>{" "}
+          sarà dal <strong>20 Aprile al 21 Luglio a Torino</strong>, al Mastio
+          della Cittadella. <strong>Fernando Botero</strong>, nato il 19 aprile
+          1932 a Medellín, in Colombia, <strong>scomparso il 15/09/2023</strong>
+          , è stato un pittore, scultore e disegnatore colombiano.
+        </p>
+        <p>
+          <strong>Viacrucis: la passione di Cristo</strong> è un ciclo di opere
+          in cui l’artista, fedele al proprio linguaggio artistico, integra la
+          tradizione della storia dell’arte occidentale con elementi
+          contemporanei. Questa volta si tratta di un{" "}
+          <strong>tema sacro</strong> e il suo sguardo sembra rivolgersi alla
+          condizione umana, al dolore, all’ingiustizia e alla sofferenza nel
+          mondo attuale.
+        </p>
+        <Link
+          href={
+            "https://www.navigaresrl.com/mostra/ricordando-fernando-botero-via-crucis-la-passione-di-cristo/"
+          }
+          className={styles.link}
+        >
+          Info Mostra
+        </Link>
       </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
+      <div className={styles.iscrizione}>
+        <h4>
+          Iscriviti entro il 31 Dicembre alla nostra Waiting List per ricevere
+          uno sconto del 30%
+        </h4>
+        <h5>
+          * lo sconto verrà applicato SOLO per il biglietto INTERO FERIALE
+          acquistato in biglietteria
+        </h5>
+        <Link
+          href={
+            "mailto:web@navigaresrl.com?subject= Waiting List Botero Torino"
+          }
         >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+          <p>SCRIVICI NOME E COGNOME</p>
+        </Link>
+        <h6>N.B : Cliccando su Invia autorizzi il trattamento dei tuoi dati</h6>
+      </div>
+      <div className={styles.footer}>
+        Una produzione di
+        <Link href={"https://www.navigaresrl.com/"}>NavigareSrl</Link>
       </div>
     </main>
-  )
+  );
 }
