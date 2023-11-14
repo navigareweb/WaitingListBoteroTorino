@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./index.module.scss";
-import copertina from "../../public/600x300.png";
+import copertina from "../../public/600x300_botero.jpg";
 
 export default function Home() {
   return (
